@@ -28,23 +28,27 @@ function createSliderContent(contentHTML)
     return sliderContent;
 }
 
-function createSliderImage(src)
+export function createSliderImage(src, alt)
 {
     const sliderImg = document.createElement('img');
     sliderImg.className = "slider-img";
     sliderImg.src = src;
-    return sliderDiv;
+    sliderImg.alt = alt;
+    return sliderImg;
 }
 
-export function createSlider(imgList)
+export function createSlider(sliderImgList)
 {
     const slider = createSliderContainer();
     const btnLeft = createBtnSlider('<');
     const btnRight = createBtnSlider('>');
-    const sliderContent = createSliderContent();
-    
     slider.appendChild(btnLeft);
-    slider.appendChild(sliderContent);
+
+    sliderImgList.forEach(img => {
+        let sliderContent = createSliderContent(img);
+        slider.appendChild(sliderContent);
+    });
+
     slider.appendChild(btnRight);
     return slider;
 }
