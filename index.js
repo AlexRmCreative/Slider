@@ -1,4 +1,5 @@
 import { createSlider, createSliderImage } from './components/slider.js';
+import { assignClasses } from './cssClasses.js';
 
 let sliderImgList = [];
 for (let i = 0; i <= 5; i++) {
@@ -7,9 +8,12 @@ for (let i = 0; i <= 5; i++) {
 }
 
 function initializePage() {
-    const slider = createSlider(sliderImgList);
-    console.log(slider);
-    // appendChild(createSlider('a'));
+    const sliderContainer = document.getElementById("slider-container1");
+    assignClasses();
+}
+
+function GetSliderContainer() {
+    return document.getElementsByClassName("slider-container");
 }
 
 initializePage();

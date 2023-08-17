@@ -1,19 +1,19 @@
-function createSliderContainer()
+function createSliderRoot()
 {
     const sliderDiv = document.createElement('div');
-    sliderDiv.className = "slider-container";
+    sliderDiv.className = "slider";
     return sliderDiv;
 }
 
 function createBtnSlider(btnText)
 {
     const btn = document.createElement('button');
-    btn.className = "btn btn-slider btn-primary";
+    btn.className = "slider-btn btn btn-primary";
     btn.innerHTML = btnText;
     return btn;
 }
 
-function createSliderContent(contentHTML)
+function createSliderContainer(contentHTML)
 {
     if(contentHTML == null)
     {
@@ -23,7 +23,7 @@ function createSliderContent(contentHTML)
     }
     console.log(contentHTML);
     const sliderContent = document.createElement('div');
-    sliderContent.className = "slider-content";
+    sliderContent.className = "slider-container";
     sliderContent.appendChild(contentHTML);
     return sliderContent;
 }
