@@ -13,7 +13,7 @@ export function assignClasses() {
         switch (element.className)
         {
             case "slider-container":
-                element.className += " bg-primary"
+                element.className += " bg-primary";
                 break;
         }
     });

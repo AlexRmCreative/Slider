@@ -1,6 +1,48 @@
-.slider
-{
-    max-width: 600px;
-    max-height: 340px;
+.container{
+    display: flex;
+    justify-content: center;
+}
+.box{
+    border-radius: 10px;
+}
+
+.verde {
+    background-color: rgb(53, 232, 71);
+    width: 400px;
+    height: 225px;
     position: relative;
+}
+
+.amarillo {
+    background-color: rgb(232, 223, 53);
+    position: absolute;
+    left: 50%;
+    transform: translate(0%, 50%);
+}
+
+.azul {
+    background-color: rgb(53, 166, 232);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.rojo {
+    background-color: rgb(232, 53, 53);
+    position: absolute;
+    left: 50%;
+    transform: translate(-100%, 50%);
+}
+
+.content{
+    height: 50%;
+    width: 33%;
+    z-index: 0;
+    transition: transform 1s ease-in-out, height 1s ease-in-out, z-index 0ms;
+}
+
+.main {
+    height: 55%;
+    transform: translate(-50%, 40%);
+    z-index: 1;
 }
