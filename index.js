@@ -15,7 +15,6 @@ function getTransformXY(element)
 
 function moveSliderContent(sliderContent, posX, posY){
     sliderContent.style.transform = `translate(${posX}px, ${posY}px)`;
-    sliderContent.style.transform = `translate(${posX}px, ${posY}px)`;
 }
 
 //check

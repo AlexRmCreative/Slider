@@ -2,33 +2,25 @@
     display: flex;
     justify-content: center;
 }
-.box{
-    border-radius: 10px;
-}
 
 .verde {
-    background-color: rgb(53, 232, 71);
     width: 400px;
     height: 225px;
     position: relative;
 }
 
-.amarillo {
-    background-color: rgb(232, 223, 53);
+#slider-content-1 {
     position: absolute;
     left: 50%;
     transform: translate(0%, 50%);
 }
 
-.azul {
-    background-color: rgb(53, 166, 232);
+#slider-content-2 {
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 50%);
 }
 
-.rojo {
-    background-color: rgb(232, 53, 53);
+#slider-content-3 {
     position: absolute;
     left: 50%;
     transform: translate(-100%, 50%);
@@ -40,7 +32,7 @@
     opacity: 0.8;
     filter: blur(2px);
     transition: transform 1s ease-in-out, height 1s ease-in-out,
-    opacity, opacity 1s ease-in-out, blur 1s ease-in-out;
+    opacity, opacity 1s ease-in-out, filter 1s ease-in-out;
 }
 
 .main {
