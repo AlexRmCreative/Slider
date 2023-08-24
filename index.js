@@ -107,15 +107,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function handleButtonClick(event) {
-    const button = event.target;
+    const clickedButton = event.target;
 
-    if (!button.disabled) {
-        button.disabled = true;
+    if (clickedButton.id === 'slider-left-btn' || clickedButton.id === 'slider-right-btn') {
+        const sliderLeftBtn = document.getElementById('slider-left-btn');
+        const sliderRightBtn = document.getElementById('slider-right-btn');
 
-        setTimeout(() => {
-            button.disabled = false;
-        }, 1000);
+        if (!sliderLeftBtn.disabled && !sliderRightBtn.disabled) {
+            sliderLeftBtn.disabled = true;
+            sliderRightBtn.disabled = true;
 
-        SlideCarrousel(event);
+            setTimeout(() => {
+                sliderLeftBtn.disabled = false;
+                sliderRightBtn.disabled = false;
+            }, 1000);
+
+            SlideCarrousel(event);
+        }
     }
 }
