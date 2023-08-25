@@ -10,22 +10,27 @@
     <link href="./index.css" rel="stylesheet">
 </head>
 
-<body class="bg-black">
-    <div class="container">
-        <div class="d-flex align-items-center ms-2 me-2">
-            <button id="slider-left-btn" class="btn btn-light btn-lg" value="-1"><</button>
-        </div>
-        <div class="slider box verde">
-            <div id="slider-content-1" class="slider-content content bg-light shadow" style="z-index: 0;">
+<body>
+    <div class="slider-container d-flex justify-content-center align-items-center">
+        <div class="row w-100 h-100">
+            <div class="col-12 slider bg-light">
+                <button class="col-2 btn btn-light btn-lg h-50" id="slider-left-btn" value="-1"><</button>
+                <div class="col-8 slider-content-container h-100 d-flex align-items-center justify-content-center">
+                    <div class="row w-100 h-100">
+                        <div class="slider-content bg-light shadow start-50 border border-dark" id="slider-content-1" style="z-index: 0;">
+                            Holita
+                        </div>
+                        <div class="slider-content bg-light shadow start-50 border border-dark main" id="slider-content-2" style="z-index: 2;">
+                            Holita
+                        </div>
+                        <div class="slider-content bg-light shadow start-50 border border-dark" id="slider-content-3" style="z-index: 1;">
+                            Holita
+                        </div>
+                    </div>
+                </div>
+                <button class="col-2 btn btn-light btn-lg h-50" id="slider-right-btn" value="1">></button>
             </div>
-            <div id="slider-content-2" class="slider-content content bg-light shadow main" style="z-index: 2;">
-            </div>
-            <div id="slider-content-3" class="slider-content content bg-light shadow" style="z-index: 1;">
-            </div>
-        </div>
-        <div class="d-flex align-items-center ms-2 me-2">
-            <button id="slider-right-btn" class="btn btn-light btn-lg" value="1">></button>
-        </div>
+        </div>    
     </div>
     <script type="module" src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
